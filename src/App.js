@@ -26,7 +26,7 @@ import './App.css';
 
 function App () {
 
-  let[isTitle, b] = useState(['남자 코트 추천', '카카오 해커톤 후기', '리액트 초보 꿀팁']);
+  let[isTitle, changeTitle] = useState(['남자 코트 추천', '카카오 해커톤 후기', '리액트 초보 꿀팁']);
   let[isNumber, changeNum] = useState(0);
 
   return (
@@ -35,7 +35,10 @@ function App () {
         <h4>개발 blog</h4>
       </div>
       <div className="list">
-        <h4>{ isTitle[0] } <span onClick={ () => { changeNum( isNumber+1 ) } }>👍</span> { isNumber } </h4>
+        <h4>{ isTitle[0] } 
+		<span onClick={ () => { changeNum( isNumber+1 ) } }>👍</span> { isNumber } 
+		<span onClick={ () => { changeTitle( ['여자 코트 추천', '카카오 해커톤 후기', '리액트 초보 꿀팁'] ) } }>🛍</span>
+		</h4>
         <p>2월 17일 발행</p>
       </div>
 	  <div className="list">
