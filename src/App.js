@@ -20,8 +20,9 @@ import './App.css';
 
 function App () {
 
-  let post = '강남 우동 맛집';
-  let[a, b] = useState('남자 코트 추천');
+  let[isTitleOne, a] = useState('남자 코트 추천');
+  let[isTitleTwo, b] = useState('해커톤 후기');
+  let[isTitleThree, c] = useState('리액트 꿀팁');
   
 
   return (
@@ -30,11 +31,20 @@ function App () {
         <h4>개발 blog</h4>
       </div>
       <div className="list">
-        <h4>{ post }</h4>
+        <h4>{ isTitleOne }</h4>
+        <p>2월 17일 발행</p>
+      </div>
+	  <div className="list">
+        <h4>{ isTitleTwo }</h4>
+        <p>2월 17일 발행</p>
+      </div>
+	  <div className="list">
+        <h4>{ isTitleThree }</h4>
         <p>2월 17일 발행</p>
       </div>
     </div>
   )
+  
 }
 
 export default App;
