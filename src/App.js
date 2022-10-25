@@ -28,6 +28,9 @@ import './App.css';
 // 전: onClick={ () => { changeTitle( ['여자 코트 추천', '카카오 해커톤 후기', '리액트 초보 꿀팁'] ) } }
 // 후: onClick={ () => { isTitle[0] = '여자 코트 추천' } }
 
+// 참고로 array / object 다룰 때는 원본을 보존하는 게 좋음
+// 위 방법을 쓸 경우 영구적으로 내용이 수정되므로 되돌리기가 어렵다. 따라서 카피본을 따로 만들어서 수정하는 것 추천.
+
 function App () {
 
   let[isTitle, changeTitle] = useState(['남자 코트 추천', '카카오 해커톤 후기', '리액트 초보 꿀팁']);
@@ -41,7 +44,11 @@ function App () {
       <div className="list">
         <h4>{ isTitle[0] } 
 		<span onClick={ () => { changeNum( isNumber+1 ) } }>👍</span> { isNumber } 
-		<span onClick={ () => { isTitle[0] = '여자 코트 추천' } }>🛍</span>
+		<span onClick={ () => { 
+				let copy = [...isTitle];
+				copy[0] = '여자 코트 추천';
+				changeTitle(copy);
+			} }>🛍</span>
 		</h4>
         <p>2월 17일 발행</p>
       </div>
