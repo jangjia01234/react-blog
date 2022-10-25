@@ -24,6 +24,10 @@ import './App.css';
 // state 변경하는 법:   state변경함수(새로운state)
 //   Ex: changeNum( isNumber+1 )
 
+// array 의 state 변경은 아래와 같이 한다
+// 전: onClick={ () => { changeTitle( ['여자 코트 추천', '카카오 해커톤 후기', '리액트 초보 꿀팁'] ) } }
+// 후: onClick={ () => { isTitle[0] = '여자 코트 추천' } }
+
 function App () {
 
   let[isTitle, changeTitle] = useState(['남자 코트 추천', '카카오 해커톤 후기', '리액트 초보 꿀팁']);
@@ -37,7 +41,7 @@ function App () {
       <div className="list">
         <h4>{ isTitle[0] } 
 		<span onClick={ () => { changeNum( isNumber+1 ) } }>👍</span> { isNumber } 
-		<span onClick={ () => { changeTitle( ['여자 코트 추천', '카카오 해커톤 후기', '리액트 초보 꿀팁'] ) } }>🛍</span>
+		<span onClick={ () => { isTitle[0] = '여자 코트 추천' } }>🛍</span>
 		</h4>
         <p>2월 17일 발행</p>
       </div>
