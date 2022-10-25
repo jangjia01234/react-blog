@@ -13,6 +13,7 @@ import './App.css';
 // 사용 순서: 
 //    1. import {useState} 2. useState(보관할 자료) 3. let [작명, 작명]
 //    ->   let [글제목, b] = useState('여자 코트 추천');
+// 글제목(==a) 자리에 state에 보관한 자료가 들어있음 -> a(글제목)를 사용하면 '여자 코트 추천' 이 나옴
 
 
 function App () {
