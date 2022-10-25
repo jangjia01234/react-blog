@@ -11,6 +11,7 @@ import './App.css';
 
 // 중요한 데이터는 변수 말고 state에 담기
 // -> 내용 변경 시 자동으로 html 에 반영되게 만들고 싶으면 state 사용함 (변수는 이거 안됨)
+// -> 쉽게 말해: 자주 변경될 것 같은 부분은 state 로 만들어놓기!
 // 사용 순서: 
 //    1. import {useState} 2. useState(보관할 자료) 3. let [작명, 작명]
 //    ->   let [글제목, b] = useState('여자 코트 추천');
