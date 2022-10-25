@@ -19,6 +19,10 @@ import './App.css';
 // b 는 state 변경을 도와주는 함수 (추후에 공부할 예정)
 
 // onClick = { } 안에는 함수 이름을 넣어야 함!
+//   Ex: onClick = { () => { changeNum } }
+
+// state 변경하는 법:   state변경함수(새로운state)
+//   Ex: changeNum( isNumber+1 )
 
 function App () {
 
