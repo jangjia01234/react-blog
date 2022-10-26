@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-
+import styled from 'styled-components';
 
 function App () {
 
@@ -14,20 +14,20 @@ function App () {
       </div>
       <div className="list">
         <h4>{ isTitle[0] } 
-		<span onClick={ () => { changeNum( isNumber+1 ) } }>👍</span> { isNumber } 
-		<span onClick={ () => { 
+		  <span onClick={ () => { changeNum( isNumber+1 ) } }>👍</span> { isNumber } 
+		  <span onClick={ () => { 
 				let copy = [...isTitle];
 				copy[0] = '여자 코트 추천';
 				changeTitle(copy);
 			} }>🛍</span>
-		</h4>
+		  </h4>
         <p>2월 17일 발행</p>
       </div>
-	  <div className="list">
+	    <div className="list">
         <h4>{ isTitle[1] }</h4>
         <p>2월 17일 발행</p>
       </div>
-	  <div className="list">
+	    <div className="list">
         <h4>{ isTitle[2] }</h4>
         <p>2월 17일 발행</p>
       </div>
