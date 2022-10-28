@@ -4,8 +4,8 @@ import styled from 'styled-components';
 
 function App () {
 
-  let[isTitle, changeTitle] = useState(['남자 코트 추천', '카카오 해커톤 후기', '리액트 초보 꿀팁']);
-  let[isNumber, changeNum] = useState(0);
+  let[isTitle, setTitle] = useState(['남자 코트 추천', '카카오 해커톤 후기', '리액트 초보 꿀팁']);
+  let[isNumber, setNum] = useState(0);
 
   return (
     <div className="App">
@@ -14,11 +14,11 @@ function App () {
       </div>
       <div className="list">
         <h4>{ isTitle[0] } 
-		  <span onClick={ () => { changeNum( isNumber+1 ) } }>👍</span> { isNumber } 
+		  <span onClick={ () => { setNum( isNumber+1 ) } }>👍</span> { isNumber } 
 		  <span onClick={ () => { 
 				let copy = [...isTitle];
 				copy[0] = '여자 코트 추천';
-				changeTitle(copy);
+				setTitle(copy);
 			} }>🛍</span>
 		  </h4>
         <p>2월 17일 발행</p>
